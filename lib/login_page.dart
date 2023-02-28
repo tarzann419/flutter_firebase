@@ -45,13 +45,82 @@ class _LoginPageState extends State<LoginPage> {
                     fontSize: 20,
                     color: Colors.grey,
                 ),),
-                TextField(
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(30.0)
+                SizedBox(height: 50,),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30.0),
+                    boxShadow: [
+                      BoxShadow(
+                      blurRadius: 7,
+                      offset: Offset(1, 1),
+                        color: Colors.grey.withOpacity(0.3)
+                    )
+                    ]
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0), // for removing rectangular edges on the input field
+                        borderSide: BorderSide(
+                          color: Colors.white,
+                        )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          )
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0)
+                      ),
                     ),
                   ),
+                ),
+                SizedBox(height: 20,),
+                Container(
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(30.0),
+                    boxShadow: [
+                      BoxShadow(
+                      blurRadius: 7,
+                      offset: Offset(1, 1),
+                        color: Colors.grey.withOpacity(0.3)
+                    )
+                    ]
+                  ),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0), // for removing rectangular edges on the input field
+                        borderSide: BorderSide(
+                          color: Colors.white,
+                        )
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Colors.white,
+                          )
+                      ),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(30.0)
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(height: 20,),
+                Row(
+                  children: [
+                    Expanded(child: Container(),), // we use an empty container to push the text so we can get the text to the right side
+                    Text(
+                      "Sign In to your account", style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.grey,
+                    ),),
+                  ],
                 )
+
               ],
             ),
           ),
