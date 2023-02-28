@@ -119,11 +119,46 @@ class _LoginPageState extends State<LoginPage> {
                       color: Colors.grey,
                     ),),
                   ],
-                )
+                ),
 
               ],
             ),
           ),
+          SizedBox(height: 70,),
+          Container(
+            width: w*0.5,
+            height: h*0.08,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(30),
+                image: DecorationImage(
+                    image: AssetImage(
+                        "assets/img/loginbtn.png"
+                    ),
+                    fit: BoxFit.cover
+                )
+            ),
+            child: Center(
+              child: Text(
+                "Sign In",
+                style: TextStyle(
+                  fontSize: 36,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+          SizedBox(height: w*0.08),
+          RichText(text: TextSpan(
+            text: "Don\'t have an account?",
+            style: TextStyle(
+              color: Colors.grey[500],
+              fontSize: 20,
+            ),
+            children: [
+
+            ]
+          ),)
         ],
       ),
     );
