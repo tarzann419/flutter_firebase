@@ -156,9 +156,16 @@ class _LoginPageState extends State<LoginPage> {
               fontSize: 20,
             ),
             children: [
-
+              TextSpan(
+              text: " Create",
+              style: TextStyle(
+                color: Colors.black,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),)
             ]
-          ),)
+          ),
+          ),
         ],
       ),
     );
