@@ -42,7 +42,21 @@ class WelcomePage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 70,),
-
+          Text(
+            "Welcome",
+            style: TextStyle(
+              fontSize: 36,
+              fontWeight: FontWeight.bold,
+              color: Colors.black54,
+            ),
+          ),
+          Text(
+            "example@gmail.com",
+            style: TextStyle(
+              fontSize: 17,
+              color: Colors.grey[500],
+            ),
+          ),
           Container(
             width: w*0.5,
             height: h*0.08,
