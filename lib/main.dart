@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase/signup_page.dart';
+import 'package:flutter_firebase/welcome_page.dart';
 import 'login_page.dart';
 
 void main() {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: LoginPage()
-      home: SignUpPage()
+      home: WelcomePage()
     );
   }
 }
