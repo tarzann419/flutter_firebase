@@ -60,6 +60,8 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: TextField(
                     decoration: InputDecoration(
+                      hintText: "Email Address",
+                      prefixIcon: Icon(Icons.mail_lock_outlined, color: Colors.deepOrangeAccent,),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30.0), // for removing rectangular edges on the input field
                         borderSide: BorderSide(
@@ -92,6 +94,8 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: TextField(
                     decoration: InputDecoration(
+                      hintText: "Password",
+                      prefixIcon: Icon(Icons.password_outlined, color: Colors.deepOrangeAccent,),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(30.0), // for removing rectangular edges on the input field
                         borderSide: BorderSide(
