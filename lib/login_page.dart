@@ -1,4 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/signup_page.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 
 class LoginPage extends StatefulWidget {
@@ -157,7 +161,7 @@ class _LoginPageState extends State<LoginPage> {
             text: "Don\'t have an account?",
             style: TextStyle(
               color: Colors.grey[500],
-              fontSize: 20,
+              fontSize: 20
             ),
             children: [
               TextSpan(
@@ -166,8 +170,10 @@ class _LoginPageState extends State<LoginPage> {
                 color: Colors.black,
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-              ),)
-            ]
+              ),
+                recognizer: TapGestureRecognizer()..onTap=()=>Get.to(SignUpPage())
+              )
+               ]
           ),
           ),
         ],

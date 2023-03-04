@@ -1,4 +1,8 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/login_page.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -142,22 +146,42 @@ class SignUpPage extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(height: w*0.2),
+          SizedBox(height: w*0.08),
           RichText(text: TextSpan(
-              text: "Already have an account?",
+            // recognizer: TapGestureRecognizer()..onTap=()=>Get.to(()=>LoginPage()),
+            text: "Already have an account?",
+            style: TextStyle(
+              fontSize: 20,
+              color: Colors.grey
+            ),
+            children: [
+              TextSpan(
+                text: " Sign In",
+                style: TextStyle(
+                  color: Colors.black
+                ),
+                recognizer: TapGestureRecognizer()..onTap=()=>Get.to(LoginPage())
+              )
+            ]
+          )
+          ),
+
+          SizedBox(height: w*0.1),
+          RichText(text: TextSpan(
+              text: "Signup using the following",
               style: TextStyle(
                 color: Colors.grey[500],
                 fontSize: 20,
               ),
-              children: [
-                TextSpan(
-                  text: " Create",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                  ),)
-              ]
+              // children: [
+              //   TextSpan(
+              //     text: " Create",
+              //     style: TextStyle(
+              //       color: Colors.black,
+              //       fontSize: 20,
+              //       fontWeight: FontWeight.bold,
+              //     ),)
+              // ]
           ),),
           // SizedBox(height: w*0.08),
           Wrap(
