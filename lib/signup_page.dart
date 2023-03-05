@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase/auth_controller.dart';
 import 'package:flutter_firebase/login_page.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
@@ -123,29 +124,34 @@ class SignUpPage extends StatelessWidget {
             ),
           ),
           SizedBox(height: 70,),
-          Container(
-            width: w*0.5,
-            height: h*0.08,
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(30),
-                image: DecorationImage(
-                    image: AssetImage(
-                        "assets/img/loginbtn.png"
-                    ),
-                    fit: BoxFit.cover
-                )
-            ),
-            child: Center(
-              child: Text(
-                "Sign Up",
-                style: TextStyle(
-                  fontSize: 36,
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
+          GestureDetector(
+            onTap: (){
+              AuthController.instance.register(email, password)
+            },
+            child: Container(
+              width: w*0.5,
+              height: h*0.08,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  image: DecorationImage(
+                      image: AssetImage(
+                          "assets/img/loginbtn.png"
+                      ),
+                      fit: BoxFit.cover
+                  )
+              ),
+              child: Center(
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(
+                    fontSize: 36,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
-          ),
+          ), //signup button
           SizedBox(height: w*0.08),
           RichText(text: TextSpan(
             // recognizer: TapGestureRecognizer()..onTap=()=>Get.to(()=>LoginPage()),
